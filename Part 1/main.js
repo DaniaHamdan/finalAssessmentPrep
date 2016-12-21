@@ -13,8 +13,34 @@
 	c- create a function called avergeStudents() to calculate the average age of your class students, is it possible to pass all your class students one by one ? think of a way to pass them in your function
 */
 // write your code here ...
+var arr=[]
+function fact(name,age,education,nationality){
+	var student={};
+student.name=name;
+	student.age=age;
+	student.education=education;
+	student.nationality=nationality
+	return student
+}
 
+function represent(name,age,education,nationality){
+ var x=fact(name,age,education,nationality)
+ arr.push(x);
+return x 
+}
 
+function showFriend(n){
+	arr.forEach(function(element){
+	console.log("Name "+element.name+", " +"Age "+element.age +", "+"education "+element.education+", "+"Nationality "+element.nationality+"\n")
+	})
+}
+ function avergeStudents(){
+ 	var count=arr.length;
+ 	var sumAge=arr.reduce(function(acc,element){
+ 		 return acc+=element.age
+ 	},0)
+ 	return sumAge/count
+ }
 
 
 /*
@@ -25,8 +51,23 @@
 	rangeSquared(2,10)// [4,16,12,16,100];
 */
 // write your code here ...
-
-
+function square(n){
+	return n*n
+}
+function rangeSquared(a,b){
+	var arr=[]
+ if(b===undefined){
+ 	if(a%2===0){
+			arr.push(square(a))
+		}else return null;
+ }
+	for(var i=a;i<=b;i++){
+		if(i%2===0){
+			arr.push(square(i))
+		}
+	}
+	return arr
+}
 
 
 /* c- Find all leaders in an array. A leader is an element larger than all elements to the right of it.
@@ -36,3 +77,12 @@
 
 // write your code here ....
 
+function leader(arr){
+	var result=[]
+	arr.forEash(function(element,i){
+		for(var j=0;arr.length-i;j++){
+			if () 
+
+		}
+	})
+}

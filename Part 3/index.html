@@ -2,12 +2,35 @@
 <html>
     <head>
         <title> To Do List</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        
     </head>
 <body>
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script>
+   
+   $(document).ready(function(){
+
+function add(){
+  var x=$('input')
+var a=x["0"].value
+    $('ul').append('<li></li>')
+    $('li').textContent=a;
+        }
+
+});
+function add() {
+  var x=$("#inputToDO").value;
+    $('ul').append('<li> </li>')
+    $('li').text=x;
+        }
+    
+</script>
+
     <div class="toDoDiv">
         <p>
-            <input type="text" id="inputToDO" class="textinput" placeholder="New to do ... " />
-            <button id="addBtn" class="btnSend"> Add</button>
+            <input type="text" id="inputToDO" class="textinput" placeholder="New to do ... "/>
+            <button id="addBtn" class="btnSend" onclick="add()"> Add</button>
         </p>
         <h1>Things to do before the immersive:</h1>
         <ul>
